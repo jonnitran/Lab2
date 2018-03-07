@@ -6,32 +6,31 @@ public class Card implements Comparable {
 	private eSuit eSuit;
 	
 	
-	public Card(pkgEnum.eRank rank, pkgEnum.eSuit suit) {
+	public Card(pkgEnum.eRank eRank, pkgEnum.eSuit eSuit) {
 		super();
 		this.eRank = eRank;
 		this.eSuit = eSuit;
 	}
 	
-	@Override
-	public int compareTo(Object o) {
-		Card c = (Card) o;
-		return c.geteRank().compareTo(this.geteRank());
-}
+
 
 	public eRank geteRank() {
 		return eRank;
 	}
 
-	private void seteRank(eRank erank) {
-		this.eRank = erank;
+	private void seteRank(eRank eRank) {
+		this.eRank = eRank;
 	}
 
 	public eSuit geteSuit() {
 		return eSuit;
 	}
 
-	private void seteSuit(eSuit esuit) {
-		this.eSuit = esuit;
+	private void seteSuit(eSuit eSuit) {
+		this.eSuit = eSuit;
 	}
-	
+	@Override
+	public int compareTo(Object o) {
+		Card c = (Card) o;
+		return c.geteRank().compareTo(this.geteRank());}
 }

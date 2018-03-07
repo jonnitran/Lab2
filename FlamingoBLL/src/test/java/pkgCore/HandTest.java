@@ -79,7 +79,6 @@ public class HandTest {
 	@Test
 	public void test1() {
 		
-		// TODO: Test 2-3-4, score should be 9
 
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
@@ -88,13 +87,11 @@ public class HandTest {
 		cards.add(new Card(eRank.FOUR,eSuit.CLUBS));
 		int[] score = HandHelper(cards);
 		
-		//	TODO: Check Score to make sure it's right.  Something close to this:
 		assertEquals(score[0],9);		
 	}
 
-	//@Test
+	@Test
 	public void test2() {
-		// TODO: Test 2-3-J, score should be 15
 		
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
@@ -109,9 +106,8 @@ public class HandTest {
 		
 	}
 
-	//@Test
+	@Test
 	public void test3() {
-		// TODO: Test 2-3-J-J, score should be 25
 		
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
@@ -122,12 +118,12 @@ public class HandTest {
 		
 		int[] score = HandHelper(cards);
 		assertEquals(score[0],25);
+		assertEquals(score[1],25);
 		
 	}
 
-	//@Test
+	@Test
 	public void test4() {
-		// TODO: Test J-A, score should be 21
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
 		cards.add(new Card(eRank.ACE,eSuit.CLUBS));
@@ -135,13 +131,13 @@ public class HandTest {
 		
 		int[] score = HandHelper(cards);
 		
-		assertEquals(score[0],12);
+		assertEquals(score[0],11);
+		assertEquals(score[1],21);
 		
 	}
 
-	//@Test
+	@Test
 	public void test5() {
-		// TODO: Test J-A-A, score should be 12
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
 		cards.add(new Card(eRank.ACE,eSuit.CLUBS));
@@ -151,13 +147,13 @@ public class HandTest {
 		int[] score = HandHelper(cards);
 		
 		assertEquals(score[0],12);
+
 		
 		
 	}
 
-	//@Test
+	@Test
 	public void test6() {
-		// TODO: Test J-A-A-A, score should be 13
 		ArrayList<Card> cards = new ArrayList<Card>();
 		
 		cards.add(new Card(eRank.ACE,eSuit.CLUBS));
@@ -166,14 +162,12 @@ public class HandTest {
 		cards.add(new Card(eRank.JACK,eSuit.CLUBS));
 		
 		int[] score = HandHelper(cards);
-		System.out.println(score[0]);
 		assertEquals(score[0],13);
 
 	}
 	
-	//@Test
+	@Test
 	public void test7() {
-		//	TODO: Test A-A-A-A-2, score should be 6 or 16
 		
 		ArrayList<Card> cards = new ArrayList<Card>();
 		

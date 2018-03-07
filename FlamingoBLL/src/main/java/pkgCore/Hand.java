@@ -32,7 +32,8 @@ public class Hand {
 		
 		Collections.sort(cards);
 		
-		
+
+		int acecount = 0;
 		for (Card c: cards)
 		{
 			switch(c.geteRank()) {
@@ -55,8 +56,15 @@ public class Hand {
 				iScore[1] += 10;
 				break;
 			case ACE:
+				acecount++;
+				if (acecount == 1) {
+					iScore[0] += 1;
+					iScore[1] += 11;
+				}
+				else {
 				iScore[0] +=1;
-				iScore[1] +=11;
+				iScore[1] +=1;
+				}
 				break;
 			
 			}
