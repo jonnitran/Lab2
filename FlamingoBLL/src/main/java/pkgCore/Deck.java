@@ -30,4 +30,23 @@ public class Deck {
 		return aDraw;
 	}	
 	
+	public int getRemaining(Object eNum) {
+		int count = 0;
+		if ( eNum instanceof eSuit) {
+			for (Card c:cards){
+				if (c.geteSuit().equals(eNum)){
+					count++;
+				}
+			}
+		}
+		else if (eNum instanceof eRank) {
+			for (Card c:cards){
+				if (c.geteRank().equals(eNum)){
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+	
 }
